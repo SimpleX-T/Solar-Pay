@@ -1,81 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="login.css" />
+		<title>SolarPay | Login</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="login.css" />
-	<title>SolarPay | Login</title>
-</head>
+	<body>
+		<div class="form-container">
+			<div class="aside">
+				<h1 class="title">SOLAR PAY</h1>
+				<a href="./index.html" class="back">
+					<img
+						src="https://www.svgrepo.com/show/533620/arrow-sm-left.svg"
+						alt="arrow-back" />
+				</a>
+			</div>
+			<div class="container">
+				<form class="login">
+					<h1 id="title">Login</h1>
+					<div class="input">
+						<label for="username">Email or Phone</label>
+						<input
+							type="text"
+							placeholder="Email or Phone"
+							name="username"
+							id="username" />
+					</div>
+					<div class="input">
+						<label for="password" required>Password</label>
+						<input
+							type="password"
+							required
+							placeholder="Password"
+							name="password"
+							id="password" />
+						<img
+							src="https://www.svgrepo.com/show/532492/eye-alt.svg"
+							id="show"
+							title="Show Password" />
+					</div>
+					<div class="messages">
+						<span class="error" id="errMsg"></span>
+						<span class="success" id="success"></span>
+					</div>
+					<input type="submit" class="btn" value="Login" />
+					<div class="signup-div">
+						<p class="sign-up">
+							Don't have an account?
+							<a href="#" class="create">Signup</a>
+						</p>
+					</div>
+				</form>
 
-<body>
-	<div class="form-container">
-		<div class="aside">
-			<h1 class="title">SOLAR PAY</h1>
-			<a href="/index.html" class="back">
-				<img src="https://www.svgrepo.com/show/533620/arrow-sm-left.svg" alt="arrow-back">
-			</a>
+				<!-- ========= Signup form ========== -->
+
+				<form class="signup" id="signup">
+					<h1 class="title">Signup</h1>
+					<input
+						type="text"
+						placeholder="Firstname"
+						id="firstname"
+						required />
+					<input
+						type="text"
+						placeholder="Lastname"
+						id="lastname"
+						required />
+					<input
+						type="email"
+						name="email"
+						id="newUserEmail"
+						placeholder="Email"
+						required />
+					<input
+						type="password"
+						name="newPassword"
+						id="newPassword"
+						placeholder="Create Password"
+						required />
+					<input
+						type="password"
+						name="confirmPassword"
+						id="confirmPassword"
+						placeholder="Confirm Password"
+						required />
+					<select name="gender" id="gender">
+						<option value="select">Select...</option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+
+					<div class="messages">
+						<span class="success" id="success"></span>
+						<span class="error" id="errMsg"></span>
+					</div>
+
+					<input type="submit" class="btn" value="Signup" />
+
+					<div class="signup-div">
+						<p class="sign-up">
+							Already have an account?
+							<a href="#" class="create">Login</a>
+						</p>
+					</div>
+				</form>
+			</div>
 		</div>
-		<div class="container">
-			<form class="login">
-				<h1 id="title">Login</h1>
-				<div class="input">
-					<label for="username">Email or Phone</label>
-					<input type="text" placeholder="Email or Phone" name="username" id="username" />
-				</div>
-				<div class="input">
-					<label for="password" required>Password</label>
-					<input type="password" required placeholder="Password" name="password" id="password" />
-					<img src="https://www.svgrepo.com/show/532492/eye-alt.svg" id="show" title="Show Password">
-				</div>
-				<div class="messages">
-					<span class="error" id="errMsg"></span>
-					<span class="success" id="success"></span>
-				</div>
-				<input type="submit" class="btn" value="Login" />
-				<div class="signup-div">
-					<p class="sign-up">
-						Don't have an account?
-						<a href="#" class="create">Signup</a>
-					</p>
-				</div>
-			</form>
 
-
-			<!-- ========= Signup form ========== -->
-
-			<form class="signup" id="signup">
-				<h1 class="title">Signup</h1>
-				<input type="text" placeholder="Firstname" id="firstname" required>
-				<input type="text" placeholder="Lastname" id="lastname" required>
-				<input type="email" name="email" id="newUserEmail" placeholder="Email" required>
-				<input type="password" name="newPassword" id="newPassword" placeholder="Create Password" required>
-				<input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"
-					required>
-				<select name="gender" id="gender">
-					<option value="select">Select...</option>
-					<option value="male">Male</option>
-					<option value="female">Female</option>
-				</select>
-
-				<div class="messages">
-					<span class="success" id="success"></span>
-					<span class="error" id="errMsg"></span>
-				</div>
-
-				<input type="submit" class="btn" value="Signup" />
-
-				<div class="signup-div">
-					<p class="sign-up">
-						Already have an account?
-						<a href="#" class="create">Login</a>
-					</p>
-				</div>
-			</form>
-		</div>
-	</div>
-
-	<script src="login.js"></script>
-</body>
-
+		<script src="login.js"></script>
+	</body>
 </html>
