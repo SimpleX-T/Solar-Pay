@@ -1,0 +1,245 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	outline: none;
+	border: none;
+	user-select: none;
+}
+
+html {
+	font-size: 75%;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgb(85, 137, 209);
+	background-size: cover;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 500;
+	color: #333;
+}
+
+.form-container {
+	width: 80%;
+	height: 500px;
+	border-radius: 20px;
+	box-shadow: 0 3rem 8rem rgba(10, 10, 10, 0.1);
+	overflow: hidden;
+}
+
+.aside {
+	display: none;
+}
+
+.container {
+	flex: 0 0 45%;
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	display: flex;
+	overflow: hidden;
+	padding: 20px;
+	background: rgba(202, 221, 250, 0.2);
+	backdrop-filter: blur(2px);
+	border-radius: 0 12px 12px 0;
+}
+
+#title {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.login {
+	transform: translateX(0%);
+	flex: 0 0 100%;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	transition: 0.3s ease-in-out;
+}
+
+.input {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	margin-block: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.input label {
+	color: #333;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.input #show {
+	position: absolute;
+	right: 10px;
+	top: 30px;
+	cursor: pointer;
+	opacity: 0.7;
+	width: 20px;
+	transition: 0.2s ease-in-out;
+}
+
+.input #show:hover {
+	opacity: 1;
+}
+
+.input input {
+	padding: 8px 15px;
+	font-weight: 600;
+	border-bottom: 1px solid rgb(0, 40, 95);
+	background: transparent;
+	color: rgb(0, 0, 0);
+	transition: 0.2s ease-in-out;
+}
+
+.input input:focus {
+	background: rgb(118, 175, 255);
+	border-width: 2px;
+	border-radius: 2px;
+}
+
+.success {
+	color: green;
+	font-size: 1.2rem;
+	display: none;
+}
+
+.error {
+	color: red;
+	font-size: 1rem;
+	display: none;
+}
+
+.signup .btn,
+.login .btn {
+	width: 100%;
+	padding: 8px 18px;
+	margin-block: 20px;
+	background: rgb(41, 90, 158);
+	color: #fffcff;
+	font-weight: bold;
+	border: 2px solid transparent;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+form .btn:hover {
+	background: rgba(85, 137, 209, 0.6);
+	color: rgb(4, 42, 94);
+	border-color: rgb(4, 42, 94);
+}
+
+.signup {
+	transform: translateX(100%);
+	flex: 0 0 100%;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 20px;
+	transition: 0.3s ease-in-out;
+}
+
+.signup input,
+select {
+	width: 100%;
+	padding: 5px 15px;
+	margin-block: 10px;
+	font-weight: 600;
+	border-bottom: 1px solid rgb(0, 40, 95);
+	background: transparent;
+	color: rgb(0, 0, 0);
+	transition: 0.2s ease-in-out;
+}
+
+.signup input:focus {
+	background: rgb(118, 175, 255);
+	border-width: 2px;
+	border-radius: 2px;
+}
+
+@media (min-width: 720px) {
+	.container {
+		width: 40%;
+	}
+	.container .side-bar {
+		display: block;
+	}
+	.form-container {
+		display: flex;
+		align-items: center;
+	}
+
+	.aside {
+		position: relative;
+		flex: 0 0 55%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-image: linear-gradient(
+			135deg,
+			rgba(247, 211, 158, 0.2),
+			rgba(244, 200, 150, 0.5)
+		);
+		background-size: cover;
+		background-position: center top;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		padding: 30px;
+		border-radius: 20px 0 0 20px;
+		box-shadow: 0.5rem 0 0.8rem rgba(10, 10, 10, 0.1);
+	}
+
+	.aside a {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: rgb(222, 235, 253);
+	}
+
+	.aside img {
+		width: 30px;
+	}
+
+	.aside .title {
+		font-size: 4rem;
+		text-align: center;
+	}
+}
+
+@media (min-width: 900px) {
+	.aside .title {
+		font-size: 5rem;
+		text-align: center;
+	}
+}

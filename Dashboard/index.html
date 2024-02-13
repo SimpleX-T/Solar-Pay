@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Dash Board</title>
+	</head>
+
+	<body>
+		<aside>
+			<div class="hamburger">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+			<div class="user">
+				<img src="../images/user.jpg" alt="image" class="user-img" />
+				<h2 class="user-title">John Doe</h2>
+				<p class="user-desc">Lorem, ipsum.</p>
+			</div>
+			<nav>
+				<ul class="links">
+					<li class="active">
+						<a href="#dashboard"
+							><i class="fa-solid fa-chart-simple"></i
+							>Dashboard</a
+						>
+					</li>
+					<li>
+						<a href="#notification"
+							><i class="fa-solid fa-bell"></i>Notification</a
+						>
+					</li>
+					<li>
+						<a href=""><i class="fa-solid fa-gear"></i>Setting</a>
+					</li>
+					<li>
+						<a href=""
+							><i class="fa-solid fa-chart-simple"></i>Chat</a
+						>
+					</li>
+					<li>
+						<a href=""
+							><i class="fa-solid fa-envelope"></i>Message</a
+						>
+					</li>
+					<li>
+						<a href=""><i class="fa-solid fa-star"></i>Bookmark</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+
+		<main class="section" id="dashboard">
+			<div class="cards">
+				<div class="card">
+					<h2 class="title">Lorem ipsum dolor sit.</h2>
+					<div class="load-circle" data-progress="85">
+						<div class="progress-value">0%</div>
+					</div>
+					<p class="desc">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Delectus eligendi placeat eos consequuntur est adipisci?
+					</p>
+				</div>
+				<div class="card">
+					<h2 class="title">Lorem ipsum dolor sit.</h2>
+					<div class="load-circle" data-progress="70">
+						<div class="progress-value">0%</div>
+					</div>
+					<p class="desc">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Delectus eligendi placeat eos consequuntur est adipisci?
+					</p>
+				</div>
+				<div class="card">
+					<h2 class="title">Lorem ipsum dolor sit.</h2>
+					<div class="load-circle" data-progress="50">
+						<div class="progress-value">0%</div>
+					</div>
+					<p class="desc">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Delectus eligendi placeat eos consequuntur est adipisci?
+					</p>
+				</div>
+			</div>
+			<div class="charts">
+				<div class="flow-chart">
+					<h2 class="title">Lorem, ipsum dolor</h2>
+					<p class="desc">
+						Lorem ipsum dolor sit amet consectetur adipisicing.
+					</p>
+					<img
+						src="../images/chart.png"
+						alt="flow-chart"
+						draggable="none" />
+					<div class="keys">
+						<div class="high">
+							<div class="circle"></div>
+							<p>Lorem, ipsum</p>
+						</div>
+						<div class="medium">
+							<div class="circle"></div>
+							<p>Lorem, ipsum</p>
+						</div>
+						<div class="low">
+							<div class="circle"></div>
+							<p>Lorem, ipsum</p>
+						</div>
+					</div>
+				</div>
+				<div class="chart-2">
+					<div class="heading">
+						<h1 class="title">Lorem, ipsum dolor.</h1>
+						<p class="desc">
+							Lorem ipsum dolor, sit amet consectetur adipisicing.
+						</p>
+					</div>
+					<h1 class="amount">0</h1>
+				</div>
+			</div>
+		</main>
+		<section class="section" id="notification">
+			<div class="card">
+				<div class="notification-card"></div>
+			</div>
+		</section>
+		<script src="script.js"></script>
+	</body>
+</html>

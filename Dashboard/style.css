@@ -1,0 +1,464 @@
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	line-height: 1.5;
+	list-style: none;
+	text-decoration: none;
+	user-select: none;
+}
+
+html {
+	font-size: 75%;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+
+a {
+	color: #f0ffff;
+}
+
+.hamburger {
+	font-size: 1.8rem;
+	color: rgb(7, 4, 36);
+	cursor: pointer;
+	z-index: 10;
+	transition: 0.3s ease;
+}
+
+.hamburger:hover {
+	color: #e7a516;
+}
+
+aside {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 70px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* border: 1px solid; */
+	box-shadow: 0 2px 5px rgba(50, 50, 50, 0.5);
+	background: rgb(51, 98, 252);
+	transition: 0.3s ease-in-out;
+	z-index: 100;
+}
+
+.transparent {
+	background: rgba(51, 98, 252, 0.7);
+}
+
+aside .user-img {
+	width: 50px;
+	height: 50px;
+	border: 1px solid rgb(146, 163, 241);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+aside .user-img:hover {
+	box-shadow: 0 3px 5px rgba(10, 10, 10, 0.3);
+}
+
+aside .user-title,
+aside .user-desc {
+	display: none;
+}
+
+aside nav {
+	position: fixed;
+	top: 70px;
+	left: 0;
+	width: 200px;
+	height: calc(100% - 70px);
+	padding-block: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: rgb(51, 98, 252);
+	transform: translateX(-100%);
+	transition: 0.3s ease-in-out;
+}
+
+.nav-open {
+	transform: translateX(0);
+}
+
+nav ul {
+	width: 100%;
+	height: 80%;
+}
+
+nav ul li {
+	padding: 18px 20px;
+	border-bottom: 1px solid rgb(98, 98, 134);
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+nav ul li.active,
+nav ul li:hover {
+	background: #e7a516;
+}
+
+nav ul li a {
+	font-size: 1.2rem;
+}
+
+nav ul li a i {
+	font-size: 1.8rem;
+	color: azure;
+	margin-right: 12px;
+}
+
+.section {
+	width: 100%;
+	height: auto;
+	background: #ddeedd;
+}
+
+main {
+	margin-top: 70px;
+	padding: 20px;
+}
+
+main .cards {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.cards .card {
+	width: 85%;
+	height: auto;
+	margin: 10px auto;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 12px;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: 0 2px 12px rgba(43, 35, 1, 0.1);
+}
+
+.card .title {
+	padding: 20px 0;
+	margin-bottom: 10px;
+	background: #e7a516;
+	color: #f0ffff;
+}
+
+/* ========== Progress Bar Styling ========== */
+.card .load-circle {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin: 20px auto;
+	background: #000;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+}
+
+.load-circle:before {
+	content: "";
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.progress-value {
+	position: relative;
+	font-family: "Poppins", sans-serif;
+	font-size: 30px;
+	font-weight: 800;
+	color: #050220;
+}
+/* ========== Progress Bar Styling ========== */
+
+.card .desc {
+	width: 80%;
+	margin: 0 auto 10px;
+	color: #333;
+	font-size: 1.2rem;
+}
+
+.charts {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow-x: scroll;
+	padding: 30px;
+}
+
+.charts .flow-chart {
+	min-width: 600px;
+	padding: 20px;
+	background: #fff;
+	border-radius: 12px;
+	cursor: pointer;
+	box-shadow: 0 2px 12px rgba(43, 35, 1, 0.1);
+}
+
+.flow-chart .title {
+	font-size: 2rem;
+}
+
+.flow-chart .desc {
+	font-size: 1.125rem;
+	color: #333;
+}
+
+.flow-chart img {
+	width: 550px;
+	margin-bottom: 10px;
+}
+
+.flow-chart .keys {
+	width: 60%;
+	margin: 10px auto;
+	padding: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.keys p {
+	font-style: italic;
+	color: #cccccb;
+}
+
+.keys .high,
+.keys .medium,
+.keys .low {
+	flex: 33%;
+	margin-inline: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.keys .high .circle {
+	background: #ff8c04;
+}
+.keys .medium .circle {
+	background: #ffc410;
+}
+.keys .low .circle {
+	background: #ffcf10;
+}
+
+.keys .circle {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+
+.charts .chart-2 {
+	width: 300px;
+	height: 345px;
+	margin-left: 20px;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 12px;
+	background: #fff;
+	box-shadow: 0 2px 12px rgba(43, 35, 1, 0.1);
+}
+
+.chart-2 .heading {
+	margin-bottom: 30px;
+	background: #e7a516;
+	border-radius: 12px 12px 0 0;
+	color: #f0ffff;
+}
+
+.chart-2 .title {
+	padding: 20px;
+	padding-bottom: 0;
+	width: 300px;
+}
+
+.chart-2 .desc {
+	padding-block: 10px;
+	font-size: 1.125rem;
+}
+
+.amount {
+	margin-top: 50px;
+	font-size: 5rem;
+	color: #e7a516;
+}
+
+@media (min-width: 700px) {
+	.transparent {
+		background: rgb(51, 98, 252);
+	}
+	.hamburger {
+		display: none;
+	}
+	aside {
+		width: 200px;
+		height: 100%;
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		box-shadow: unset;
+		background: rgb(51, 98, 252);
+	}
+
+	.user {
+		flex: 30%;
+		height: 100%;
+		/* border: 1px solid; */
+	}
+
+	aside .user-img {
+		width: 100px;
+		height: 100px;
+		border: 1px solid rgb(146, 163, 241);
+		border-radius: 50%;
+		cursor: pointer;
+		transition: 0.3s ease;
+	}
+
+	aside .user-title,
+	aside .user-desc {
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	aside nav {
+		flex: 70%;
+		position: unset;
+		height: unset;
+		justify-content: space-between;
+		padding-block: unset;
+		transform: unset;
+		transition: unset;
+		margin-top: -50px;
+	}
+
+	.section {
+		width: calc(100% - 200px);
+		height: auto;
+		margin: 0 0 0 200px;
+	}
+
+	main {
+		background: #ddeedd;
+		padding: 20px;
+	}
+}
+@media (min-width: 900px) {
+	.section {
+		width: calc(100% - 200px);
+		height: 100vh;
+	}
+
+	main {
+		height: 120vh;
+		background: #ddeedd;
+		padding: 20px 10px 0;
+	}
+
+	.cards .card {
+		width: 300px;
+		height: 250px;
+		margin: 10px auto;
+		cursor: pointer;
+		text-align: center;
+		border-radius: 12px;
+		background: #fff;
+		box-shadow: 0 2px 12px rgba(43, 35, 1, 0.1);
+	}
+
+	.card .title {
+		padding: 10px 0;
+		margin-bottom: 10px;
+		background: #e7a516;
+		color: #f0ffff;
+	}
+
+	.card .load-circle {
+		position: relative;
+		width: 120px;
+		height: 120px;
+		margin: 10px auto;
+		background: #000;
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+	}
+
+	.load-circle:before {
+		content: "";
+		position: absolute;
+		width: 90%;
+		height: 90%;
+		background: #fff;
+		border-radius: 50%;
+	}
+
+	.progress-value {
+		position: relative;
+		font-family: "Poppins", sans-serif;
+		font-size: 30px;
+		font-weight: 800;
+		color: #050220;
+	}
+
+	.card .desc {
+		width: 80%;
+		margin: 0 auto 5px;
+		color: #333;
+		font-size: 1rem;
+	}
+
+	.charts {
+		overflow: hidden;
+	}
+
+	.charts .flow-chart {
+		flex: 70%;
+		width: 70%;
+		padding-block: 10px;
+	}
+
+	.flow-chart img {
+		width: 100%;
+		margin-bottom: unset;
+	}
+
+	.flow-chart .keys {
+		width: 50%;
+		margin: 5px auto 0;
+		padding: 2px;
+	}
+
+	.charts .chart-2 {
+		margin-left: 20px;
+	}
+
+	.chart-2 .heading {
+		margin-bottom: 20px;
+	}
+}
